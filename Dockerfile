@@ -6,6 +6,7 @@ RUN \
   apt-get install software-properties-common -y && \
   add-apt-repository -y ppa:nginx/stable && \
   apt-get update -y && \
+  apt-get install htop -y && \
   apt-get install -y nginx && \
   rm -rf /var/lib/apt/lists/* && \
   echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
