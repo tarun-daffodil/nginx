@@ -2,10 +2,10 @@ FROM ubuntu:16.04
 
 # Install Nginx.
 RUN \
-  apt-get update && \
-  apt-get install software-properties-common && \
+  apt-get update -y && \
+  apt-get install software-properties-common -y && \
   add-apt-repository -y ppa:nginx/stable && \
-  apt-get update && \
+  apt-get update -y && \
   apt-get install -y nginx && \
   rm -rf /var/lib/apt/lists/* && \
   echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
